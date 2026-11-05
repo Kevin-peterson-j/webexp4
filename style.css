@@ -1,0 +1,324 @@
+/* ==========================================================================
+   Base Setup & Outer Container
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #5a5a5a;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.page-container {
+  width: 780px;
+  background-color: #ffffff;
+  border: 1px solid #777777;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   1. Header Section: Gradients, Multiple Backgrounds, Shadows
+   ========================================================================== */
+.top-banner {
+  height: 220px;
+  position: relative;
+  /* CSS3 Linear Gradient to emulate the blue wave theme */
+  background: linear-gradient(180deg, #1860a8 0%, #2980b9 45%, #5dade2 80%, #aed6f1 100%);
+  padding: 20px;
+}
+
+.badge-card-container {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 140px;
+  height: 160px;
+}
+
+/* Individual card styling with borders and rounded corners */
+.thumb-card {
+  position: absolute;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.thumb-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Four distinct corner values demonstration */
+.thumb-1 {
+  width: 45px;
+  height: 55px;
+  top: 0;
+  left: 10px;
+  border-radius: 15px 50px 30px 5px;
+  background-color: #d4e6f1;
+}
+
+.thumb-2 {
+  width: 55px;
+  height: 75px;
+  top: 20px;
+  left: 20px;
+  border-radius: 8px;
+  /* CSS3 Border image fallback & properties */
+  border: 4px solid #b03a2e;
+}
+
+.thumb-3 {
+  width: 55px;
+  height: 75px;
+  top: 55px;
+  left: 55px;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   2. Navigation Bar
+   ========================================================================== */
+.navbar {
+  display: flex;
+  background-color: #7f8c8d;
+  height: 34px;
+  border-top: 1px solid #626567;
+  border-bottom: 1px solid #626567;
+}
+
+.nav-btn {
+  flex: 1;
+  text-align: center;
+  line-height: 34px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 13px;
+  border-right: 1px solid #95a5a6;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-btn:last-child {
+  border-right: none;
+}
+
+.nav-btn.active {
+  background-color: #ff0000;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-btn:hover:not(.active) {
+  background-color: #95a5a6;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   3. Middle Section: Table with nth-child and Adjacent Sibling Hover
+   ========================================================================== */
+.table-section {
+  background-color: #f8b4b4; /* Light pink background */
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.table-container {
+  width: 250px;
+}
+
+.item-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  /* CSS3 Rounded Corners on the entire table container */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #27ae60;
+}
+
+.item-table th {
+  background-color: #1e8449;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 6px;
+  font-weight: normal;
+}
+
+.item-table td {
+  padding: 8px 16px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+/* Alternate row colors using :nth-child(odd) and :nth-child(even) */
+.item-table tbody tr:nth-child(odd) {
+  background-color: #a8f32c;
+}
+
+.item-table tbody tr:nth-child(even) {
+  background-color: #0b9e3f;
+}
+
+/* Change row background color on mouse hover */
+.item-table tbody tr:hover {
+  background-color: #eafaf1;
+}
+
+.item-table .itemName {
+  cursor: pointer;
+  font-weight: 600;
+  color: #145a32;
+  width: 60%;
+}
+
+.item-table .itemImg {
+  text-align: right;
+  /* Default lowered opacity */
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.item-table .itemImg img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Adjacent sibling selector: Hovering on .itemName fully shows .itemImg */
+.itemName:hover + .itemImg {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   4. Lower Section: Desk BG & Sign In / Sign Up Boxes
+   ========================================================================== */
+.forms-section {
+  position: relative;
+  /* Workspace desk background with subtle dark overlay */
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=900") center/cover no-repeat;
+  padding: 40px 20px 45px;
+}
+
+.forms-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Form cards with rounded corners and soft drop shadows */
+.auth-card {
+  width: 250px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 20px 18px 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 14px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 4px;
+}
+
+/* Pseudo-classes for form inputs */
+.form-group input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 10px;
+  border: 1px solid #cccccc;
+  background-color: #e5e8e8;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* input:focus pseudo-class */
+.form-group input:focus {
+  border: 2px solid #007bff;
+  background-color: #ffffff;
+}
+
+/* input:required pseudo-class */
+.form-group input:required {
+  border-left: 3px solid #2980b9;
+}
+
+/* input:valid & invalid pseudo-classes */
+.form-group input[type="email"]:valid {
+  color: #27ae60;
+}
+
+.form-group input[type="email"]:invalid {
+  color: #c0392b;
+}
+
+/* Submit Buttons */
+.submit-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px 0;
+  background: linear-gradient(180deg, #1e70e4 0%, #0d52b9 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   5. Footer
+   ========================================================================== */
+.footer {
+  background-color: #faedcd;
+  border-top: 1px solid #d4a373;
+  padding: 12px 20px;
+  font-size: 12px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.footer-addr {
+  font-style: italic;
+  margin-bottom: 2px;
+}
+
+.footer-copy {
+  font-size: 11px;
+}

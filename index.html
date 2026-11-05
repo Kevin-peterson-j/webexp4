@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3 Advanced Properties & Form Styling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-container">
+
+    <!-- 1. Top Section: Multiple Backgrounds, Gradients & Floating Decorative Cards -->
+    <header class="top-banner">
+      <div class="badge-card-container">
+        <!-- Card 1: Demonstrates border-radius & multiple backgrounds -->
+        <div class="thumb-card thumb-1"></div>
+        <!-- Card 2: Demonstrates border-image styling -->
+        <div class="thumb-card thumb-2">
+          <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=100" alt="Flower">
+        </div>
+        <!-- Card 3: Demonstrates box-shadow -->
+        <div class="thumb-card thumb-3">
+          <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?w=100" alt="Fruit">
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. Navigation Bar: Hover effects & active item styling -->
+    <nav class="navbar">
+      <a href="#home" class="nav-btn active">Home</a>
+      <a href="#about" class="nav-btn">About</a>
+      <a href="#myself" class="nav-btn">Myself</a>
+      <a href="#others" class="nav-btn">Others</a>
+    </nav>
+
+    <!-- 3. Middle Section: Pink Panel with Striped Rounded Table -->
+    <section class="table-section">
+      <div class="table-container">
+        <table class="item-table">
+          <thead>
+            <tr>
+              <th colspan="2">Favorite Items</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="itemName">item1</td>
+              <td class="itemImg">
+                <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?w=50" alt="Item 1">
+              </td>
+            </tr>
+            <tr>
+              <td class="itemName">item2</td>
+              <td class="itemImg">
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=50" alt="Item 2">
+              </td>
+            </tr>
+            <tr>
+              <td class="itemName">item3</td>
+              <td class="itemImg">
+                <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?w=50" alt="Item 3">
+              </td>
+            </tr>
+            <tr>
+              <td class="itemName">item4</td>
+              <td class="itemImg">
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=50" alt="Item 4">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. Lower Section: Desk/Workspace Background with Sign In & Sign Up Cards -->
+    <section class="forms-section">
+      <div class="forms-wrapper">
+
+        <!-- Sign In Form Box -->
+        <div class="auth-card">
+          <h2 class="card-title">Sign In</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="signin-user">Username</label>
+              <input type="text" id="signin-user" placeholder="Enter Username / Email / Phone Number" required>
+            </div>
+            <div class="form-group">
+              <label for="signin-pass">Password</label>
+              <input type="password" id="signin-pass" placeholder="Enter Password" required>
+            </div>
+            <button type="submit" class="submit-btn">Sign In</button>
+          </form>
+        </div>
+
+        <!-- Sign Up Form Box -->
+        <div class="auth-card">
+          <h2 class="card-title">Sign Up</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="signup-name">Name</label>
+              <input type="text" id="signup-name" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+              <label for="signup-email">Email</label>
+              <input type="email" id="signup-email" placeholder="Enter Email" required>
+            </div>
+            <div class="form-group">
+              <label for="signup-pass">Password</label>
+              <input type="password" id="signup-pass" placeholder="Enter Password" required>
+            </div>
+            <button type="submit" class="submit-btn">Sign Up</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <footer class="footer">
+      <p class="footer-addr">Your address</p>
+      <p class="footer-copy">&copy; 2020-2021. <em>(Register number)</em> - Web Technology Lab Batch 1. All Rights Reserved.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
